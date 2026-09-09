@@ -1,2 +1,550 @@
+/* ==========================================================================
+   1. FONTS & CONFIGURATION
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-:root{--bg:#080b10;--panel:#0e131b;--text:#edf2f7;--muted:#98a4b3;--line:#222b36;--accent:#72f1b8;--accent2:#8aa8ff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.nav{position:sticky;top:0;z-index:20;height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;background:rgba(8,11,16,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.logo{font-size:1.3rem;font-weight:700}.logo span{color:var(--accent)}.nav nav{display:flex;gap:25px}.nav nav a{color:var(--muted);font-size:.86rem}.nav nav a:hover{color:var(--text)}.menu{display:none;background:none;border:0;color:var(--text);font-size:1.4rem}.hero{min-height:calc(100vh - 74px);padding:10vh 7vw 8vh;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:7vw;background:radial-gradient(circle at 75% 35%,rgba(114,241,184,.1),transparent 28%),radial-gradient(circle at 10% 80%,rgba(138,168,255,.08),transparent 25%)}.eyebrow{font: .72rem "DM Mono",monospace;color:var(--accent);letter-spacing:.13em}h1{font-size:clamp(3.6rem,9vw,7.8rem);line-height:.9;letter-spacing:-.075em;margin:18px 0}h2{font-size:clamp(2rem,4vw,4rem);line-height:1;letter-spacing:-.055em;margin:12px 0 30px}h2 span{color:var(--accent)}.hero h2{font-size:clamp(1.4rem,3vw,2.5rem);color:var(--muted);margin-bottom:22px}.hero h2 span{color:var(--accent)}.lead{max-width:650px;color:var(--muted);font-size:1.1rem}.actions{display:flex;gap:12px;margin:32px 0 55px}.btn{padding:12px 20px;border:1px solid var(--line);border-radius:5px;font-weight:600;font-size:.9rem}.btn.primary{background:var(--accent);color:#06100b;border-color:var(--accent)}.quick-stats{display:flex;gap:30px;flex-wrap:wrap}.quick-stats div{display:grid;gap:2px}.quick-stats strong{font-size:1.45rem}.quick-stats span{color:var(--muted);font-size:.72rem;max-width:115px}.chip-orbit{position:relative;width:min(390px,75vw);aspect-ratio:1;margin:auto;border:1px dashed #2a3541;border-radius:50%;animation:spin 24s linear infinite}.chip-orbit:before,.chip-orbit:after{content:"";position:absolute;inset:13%;border:1px solid #25303c;border-radius:50%}.chip-orbit:after{inset:28%}.core{position:absolute;inset:39%;display:grid;place-items:center;background:var(--panel);border:1px solid var(--accent);border-radius:12px;font-family:"DM Mono";color:var(--accent);animation:counter 24s linear infinite}.chip{position:absolute;padding:9px 12px;background:var(--panel);border:1px solid #34404e;font:.7rem "DM Mono";border-radius:4px;animation:counter 24s linear infinite}.c1{top:5%;left:40%}.c2{right:0;top:43%}.c3{bottom:9%;left:35%}.c4{left:0;top:45%}@keyframes spin{to{transform:rotate(360deg)}}@keyframes counter{to{transform:rotate(-360deg)}}.section{padding:115px 7vw;border-top:1px solid var(--line)}.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw}.section-copy{color:var(--muted);font-size:1.08rem;max-width:700px}.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.skill-grid article,.project,.edu-card{background:var(--panel);border:1px solid var(--line);padding:28px}.skill-grid span,.project-number{font:.72rem "DM Mono";color:var(--accent)}.skill-grid h3{margin:40px 0 8px}.skill-grid p{color:var(--muted);margin:0}.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.tags span{border:1px solid var(--line);padding:7px 11px;color:var(--muted);font:.72rem "DM Mono"}.project-list{display:grid;gap:12px}.project{display:grid;grid-template-columns:80px 1fr;gap:20px;transition:.25s}.project:hover{transform:translateX(6px);border-color:#3c4a59}.project h3{font-size:1.6rem;margin:7px 0 10px}.project p{color:var(--muted);max-width:850px}.project-type{font:.68rem "DM Mono";color:var(--accent2);letter-spacing:.08em}.metric{display:inline-block;margin-top:5px;padding:7px 10px;border-left:2px solid var(--accent);color:var(--text);font:.72rem "DM Mono";background:#111820}.project-link:hover{color:var(--accent)}.inline-link{color:var(--text);border-bottom:1px dashed #4b5a69}.inline-link:hover{color:var(--accent);border-color:var(--accent)}.timeline article{display:grid;grid-template-columns:220px 1fr;gap:35px;padding:35px 0;border-top:1px solid var(--line)}.date{font:.72rem "DM Mono";color:var(--accent)}.timeline h3{margin:7px 0 10px;font-size:1.5rem}.timeline p{color:var(--muted)}.edu-card{display:flex;justify-content:space-between;align-items:center;gap:30px}.edu-card h3{font-size:1.5rem;margin:8px 0}.edu-card p{color:var(--muted)}.grade{display:flex;align-items:baseline;gap:10px;text-align:right}.grade strong{font-size:3.5rem;color:var(--accent);line-height:1}.grade span{color:var(--muted);font:.7rem "DM Mono"}.school-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.school-grid div{border:1px solid var(--line);padding:20px 25px;display:flex;justify-content:space-between}.school-grid strong{font-size:1.4rem}.school-grid span{color:var(--muted)}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px}.two-col li{color:var(--muted);margin:12px 0}.compact{padding-top:80px;padding-bottom:100px}.contact{padding:140px 7vw;background:linear-gradient(135deg,#0d1518,#0a0d13);border-top:1px solid var(--line)}.contact h2{font-size:clamp(3rem,7vw,6.5rem)}.contact>p:not(.eyebrow){color:var(--muted);max-width:650px}.contact-links{display:flex;gap:25px;flex-wrap:wrap;margin-top:35px}.contact-links a{color:var(--accent);border-bottom:1px solid #315f4b;padding-bottom:3px}.note{font-size:.75rem;margin-top:45px;color:#687483!important}footer{padding:25px 7vw;border-top:1px solid var(--line);color:#687483;font:.68rem "DM Mono"}@media(max-width:850px){.nav nav{display:none}.menu{display:block}.nav.open nav{display:flex;position:absolute;top:74px;left:0;right:0;background:var(--bg);padding:20px 7vw;flex-direction:column}.hero,.split{grid-template-columns:1fr}.chip-orbit{width:280px}.skill-grid{grid-template-columns:1fr 1fr}.timeline article{grid-template-columns:1fr;gap:10px}}@media(max-width:520px){.hero{padding-top:70px}.skill-grid,.school-grid,.two-col{grid-template-columns:1fr}.project{grid-template-columns:1fr}.edu-card{align-items:flex-start;flex-direction:column}.grade{text-align:left}.contact-links{flex-direction:column}}
+
+:root {
+  --bg: #080b10;
+  --panel: #0e131b;
+  --text: #edf2f7;
+  --muted: #98a4b3;
+  --line: #222b36;
+  --accent: #72f1b8;
+  --accent2: #8aa8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   2. NAVIGATION BAR
+   ========================================================================== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+  background: rgba(8, 11, 16, 0.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav nav a {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.nav nav a:hover {
+  color: var(--text);
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+/* ==========================================================================
+   3. HERO SECTION & TYPOGRAPHY
+   ========================================================================== */
+.hero {
+  min-height: calc(100vh - 74px);
+  padding: 10vh 7vw 8vh;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 7vw;
+  background: 
+    radial-gradient(circle at 75% 35%, rgba(114, 241, 184, 0.1), transparent 28%),
+    radial-gradient(circle at 10% 80%, rgba(138, 168, 255, 0.08), transparent 25%);
+}
+
+.eyebrow {
+  font: 0.72rem "DM Mono", monospace;
+  color: var(--accent);
+  letter-spacing: 0.13em;
+}
+
+h1 {
+  font-size: clamp(3.6rem, 9vw, 7.8rem);
+  line-height: 0.9;
+  letter-spacing: -0.075em;
+  margin: 18px 0;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  margin: 12px 0 30px;
+}
+
+h2 span {
+  color: var(--accent);
+}
+
+.hero h2 {
+  font-size: clamp(1.4rem, 3vw, 2.5rem);
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.hero h2 span {
+  color: var(--accent);
+}
+
+.lead {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin: 32px 0 55px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #06100b;
+  border-color: var(--accent);
+}
+
+/* ==========================================================================
+   4. STATS ROW (THE ROW TO REPLACE IN THE FUTURE)
+   ========================================================================== */
+.quick-stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.quick-stats div {
+  display: grid;
+  gap: 2px;
+}
+
+.quick-stats strong {
+  font-size: 1.45rem;
+}
+
+.quick-stats span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  max-width: 115px;
+}
+
+/* ==========================================================================
+   5. ORBITING CHIP GRAPHIC
+   ========================================================================== */
+.chip-orbit {
+  position: relative;
+  width: min(390px, 75vw);
+  aspect-ratio: 1;
+  margin: auto;
+  border: 1px dashed #2a3541;
+  border-radius: 50%;
+  animation: spin 24s linear infinite;
+}
+
+.chip-orbit:before,
+.chip-orbit:after {
+  content: "";
+  position: absolute;
+  inset: 13%;
+  border: 1px solid #25303c;
+  border-radius: 50%;
+}
+
+.chip-orbit:after {
+  inset: 28%;
+}
+
+.core {
+  position: absolute;
+  inset: 39%;
+  display: grid;
+  place-items: center;
+  background: var(--panel);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  font-family: "DM Mono";
+  color: var(--accent);
+  animation: counter 24s linear infinite;
+}
+
+.chip {
+  position: absolute;
+  padding: 9px 12px;
+  background: var(--panel);
+  border: 1px solid #34404e;
+  font: 0.7rem "DM Mono";
+  border-radius: 4px;
+  animation: counter 24s linear infinite;
+}
+
+.c1 { top: 5%; left: 40%; }
+.c2 { right: 0; top: 43%; }
+.c3 { bottom: 9%; left: 35%; }
+.c4 { left: 0; top: 45%; }
+.c5 { bottom: 14%; left: 23%; }
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes counter {
+  to { transform: rotate(-360deg); }
+}
+
+/* ==========================================================================
+   6. COMMON PAGE SECTIONS & CARDS
+   ========================================================================== */
+.section {
+  padding: 115px 7vw;
+  border-top: 1px solid var(--line);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 8vw;
+}
+
+.section-copy {
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 700px;
+}
+
+.skill-grid article,
+.project,
+.edu-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 28px;
+}
+
+.inline-link {
+  color: var(--text);
+  border-bottom: 1px dashed #4b5a69;
+}
+
+.inline-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ==========================================================================
+   7. SKILLS GRID
+   ========================================================================== */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.skill-grid span {
+  font: 0.72rem "DM Mono";
+  color: var(--accent);
+}
+
+.skill-grid h3 {
+  margin: 40px 0 8px;
+}
+
+.skill-grid p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.tags span {
+  border: 1px solid var(--line);
+  padding: 7px 11px;
+  color: var(--muted);
+  font: 0.72rem "DM Mono";
+}
+
+/* ==========================================================================
+   8. PROJECTS SECTION
+   ========================================================================== */
+.project-list {
+  display: grid;
+  gap: 12px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
+  transition: 0.25s;
+}
+
+.project:hover {
+  transform: translateX(6px);
+  border-color: #3c4a59;
+}
+
+.project-number {
+  font: 0.72rem "DM Mono";
+  color: var(--accent);
+}
+
+.project h3 {
+  font-size: 1.6rem;
+  margin: 7px 0 10px;
+}
+
+.project p {
+  color: var(--muted);
+  max-width: 850px;
+}
+
+.project-type {
+  font: 0.68rem "DM Mono";
+  color: var(--accent2);
+  letter-spacing: 0.08em;
+}
+
+.metric {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 7px 10px;
+  border-left: 2px solid var(--accent);
+  color: var(--text);
+  font: 0.72rem "DM Mono";
+  background: #111820;
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+/* ==========================================================================
+   9. EXPERIENCE TIMELINE
+   ========================================================================== */
+.timeline article {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 35px;
+  padding: 35px 0;
+  border-top: 1px solid var(--line);
+}
+
+.date {
+  font: 0.72rem "DM Mono";
+  color: var(--accent);
+}
+
+.timeline h3 {
+  margin: 7px 0 10px;
+  font-size: 1.5rem;
+}
+
+.timeline p {
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   10. EDUCATION CARD
+   ========================================================================== */
+.edu-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.edu-card h3 {
+  font-size: 1.5rem;
+  margin: 8px 0;
+}
+
+.edu-card p {
+  color: var(--muted);
+}
+
+.grade {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  text-align: right;
+}
+
+.grade strong {
+  font-size: 3.5rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.grade span {
+  color: var(--muted);
+  font: 0.7rem "DM Mono";
+}
+
+.school-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.school-grid div {
+  border: 1px solid var(--line);
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.school-grid strong {
+  font-size: 1.4rem;
+}
+
+.school-grid span {
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   11. MISC UTILITIES & CONTACT
+   ========================================================================== */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.two-col li {
+  color: var(--muted);
+  margin: 12px 0;
+}
+
+.compact {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.contact {
+  padding: 140px 7vw;
+  background: linear-gradient(135deg, #0d1518, #0a0d13);
+  border-top: 1px solid var(--line);
+}
+
+.contact h2 {
+  font-size: clamp(3rem, 7vw, 6.5rem);
+}
+
+.contact > p:not(.eyebrow) {
+  color: var(--muted);
+  max-width: 650px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.contact-links a {
+  color: var(--accent);
+  border-bottom: 1px solid #315f4b;
+  padding-bottom: 3px;
+}
+
+.note {
+  font-size: 0.75rem;
+  margin-top: 45px;
+  color: #687483 !important;
+}
+
+footer {
+  padding: 25px 7vw;
+  border-top: 1px solid var(--line);
+  color: #687483;
+  font: 0.68rem "DM Mono";
+}
+
+/* ==========================================================================
+   12. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 850px) {
+  .nav nav {
+    display: none;
+  }
+  
+  .menu {
+    display: block;
+  }
+  
+  .nav.open nav {
+    display: flex;
+    position: absolute;
+    top: 74px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    padding: 20px 7vw;
+    flex-direction: column;
+  }
+  
+  .hero, 
+  .split {
+    grid-template-columns: 1fr;
+  }
+  
+  .chip-orbit {
+    width: 280px;
