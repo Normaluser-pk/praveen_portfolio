@@ -230,11 +230,33 @@ h2 span {
   animation: counter 24s linear infinite;
 }
 
-.c1 { top: 5%; left: 40%; }
-.c2 { right: 0; top: 43%; }
-.c3 { top: 9%; left: 35%; }
-.c4 { left: 0; top: 45%; }
-.c5 { bottom: 14%; left: 23%; }
+.c1 { 
+    top: 3%; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.c2 { 
+    top: 36%; 
+    right: 0%; 
+    transform: translateY(-50%);
+}
+
+.c3 { 
+    bottom: 4%; 
+    right: 20%; 
+}
+
+.c4 { 
+    top: 36%; 
+    left: 0%; 
+    transform: translateY(-50%);
+}
+
+.c5 { 
+    bottom: 4%; 
+    left: 20%; 
+}
 
 @keyframes spin {
   to { transform: rotate(360deg); }
