@@ -233,13 +233,11 @@ h2 span {
 .c1 { 
     top: 3%; 
     left: 50%; 
-    transform: translateX(-50%);
 }
 
 .c2 { 
     top: 36%; 
     right: 0%; 
-    transform: translateY(-50%);
 }
 
 .c3 { 
@@ -250,7 +248,6 @@ h2 span {
 .c4 { 
     top: 36%; 
     left: 0%; 
-    transform: translateY(-50%);
 }
 
 .c5 { 
